@@ -29,14 +29,14 @@ function gravity(pos) {
 }
 
 function rk4(pos, vel, dt) {
-    // k1
+    
     const a1 = gravity(pos);
     const k1vx = a1.ax * dt;
     const k1vy = a1.ay * dt;
     const k1x = vel.x * dt;
     const k1y = vel.y * dt;
 
-    // k2
+    
     const pos2 = { 
         x: pos.x + 0.5 * k1x, 
         y: pos.y + 0.5 * k1y 
@@ -51,7 +51,7 @@ function rk4(pos, vel, dt) {
     const k2x = vel2.x * dt;
     const k2y = vel2.y * dt;
 
-    // k3
+    
     const pos3 = { 
         x: pos.x + 0.5 * k2x, 
         y: pos.y + 0.5 * k2y 
@@ -66,7 +66,7 @@ function rk4(pos, vel, dt) {
     const k3x = vel3.x * dt;
     const k3y = vel3.y * dt;
 
-    // k4
+    
     const pos4 = { 
         x: pos.x + k3x, 
         y: pos.y + k3y 
@@ -158,11 +158,11 @@ function render() {
         drawTrail(satellite.trail);
         drawObject(satellite.position);
 
-        // Menghitung jarak satelit dari pusat Bumi
-        const distance = calculateDistanceFromCenter(satellite.position) / 1000; // Jarak dalam kilometer
+        
+        const distance = calculateDistanceFromCenter(satellite.position) / 1000; 
 
-        // Menampilkan informasi jarak di canvas
-        ctx.fillStyle = '#000000'; // Warna teks
+        
+        ctx.fillStyle = '#000000'; 
         ctx.font = '12px Arial';
         ctx.fillText(`Jarak: ${distance.toFixed(2)} km`, centerX + satellite.position.x * SCALE, centerY - satellite.position.y * SCALE + 15);
     });
