@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksplorasi Gerak Satelit dengan Metode Numerik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Eksplorasi Gerak Satelit</h1>
+        <p>Simulasi Gerak Satelit Menggunakan Metode Runge-Kutta Orde 4</p>
+    </header>
+
+    <section id="overview">
+        <h2>Mengenal Gerak Satelit</h2>
+        <p>
+            Satelit yang mengorbit Bumi bergerak mengikuti hukum gravitasi. Untuk memahami lebih dalam, kita memanfaatkan metode numerik seperti Runge-Kutta Orde 4 untuk memodelkan gerak ini secara akurat.
+        </p>
+    </section>
+
+    <section id="methodology">
+        <h2>Metode Runge-Kutta Orde 4</h2>
+        <p>
+            Metode Runge-Kutta Orde 4 (RK4) adalah teknik yang banyak digunakan untuk memecahkan persamaan diferensial, memberikan solusi yang cepat dan tepat untuk model gerak satelit.
+        </p>
+        <h3>Persamaan Gerak Satelit</h3>
+        <p>
+            Gerak satelit dapat digambarkan melalui persamaan diferensial yang melibatkan gaya gravitasi, yang dapat dituliskan sebagai berikut:
+        </p>
+        <pre>
+d²x/dt² = -G * M * x / r³
+d²y/dt² = -G * M * y / r³
+        </pre>
+        <p>
+            Dimana G adalah konstanta gravitasi, M adalah massa Bumi, dan (x, y) adalah posisi satelit di ruang angkasa.
+        </p>
+    </section>
+
+    <section id="simulation">
+        <h2>Simulasi Gerak Satelit</h2>
+        <div class="canvas-container">
+            <canvas id="simulationCanvas" width="1200" height="1200"></canvas>
+        </div>
+        <div class="button-container">
+            <button id="startButton">Mulai Simulasi</button>
+            <button id="resetButton">Reset</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024, Simulasi Gerak Satelit - Semua Hak Dilindungi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: #fff;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #FF6347;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    letter-spacing: 1.5px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #FFF9C4;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+h2 {
+    color:  #FF6347;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#simulationCanvas {
+    display: block;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 5px solid #FF8C00;
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 15px 25px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #FF4500;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #FF6347;
+    transform: scale(0.98);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #FF6347;
+    color: white;
+    margin-top: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+
+.indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #FF6347;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.indicator i {
+    font-size: 18px;
+    color: #16da5e;
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
